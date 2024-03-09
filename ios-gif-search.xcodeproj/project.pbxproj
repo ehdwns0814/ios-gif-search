@@ -10,7 +10,6 @@
 		0E6B99DF2B8B60C7006EB3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B99DE2B8B60C7006EB3F8 /* AppDelegate.swift */; };
 		0E6B99E12B8B60C7006EB3F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B99E02B8B60C7006EB3F8 /* SceneDelegate.swift */; };
 		0E6B99E32B8B60C7006EB3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B99E22B8B60C7006EB3F8 /* ViewController.swift */; };
-		0E6B99E62B8B60C7006EB3F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B99E42B8B60C7006EB3F8 /* Main.storyboard */; };
 		0E6B99E82B8B60C8006EB3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B99E72B8B60C8006EB3F8 /* Assets.xcassets */; };
 		0E6B99EB2B8B60C8006EB3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6B99E92B8B60C8006EB3F8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -59,7 +58,6 @@
 				0E6B99DE2B8B60C7006EB3F8 /* AppDelegate.swift */,
 				0E6B99E02B8B60C7006EB3F8 /* SceneDelegate.swift */,
 				0E6B99E22B8B60C7006EB3F8 /* ViewController.swift */,
-				0E6B99E42B8B60C7006EB3F8 /* Main.storyboard */,
 				0E6B99E72B8B60C8006EB3F8 /* Assets.xcassets */,
 				0E6B99E92B8B60C8006EB3F8 /* LaunchScreen.storyboard */,
 				0E6B99EC2B8B60C8006EB3F8 /* Info.plist */,
@@ -127,7 +125,6 @@
 			files = (
 				0E6B99EB2B8B60C8006EB3F8 /* LaunchScreen.storyboard in Resources */,
 				0E6B99E82B8B60C8006EB3F8 /* Assets.xcassets in Resources */,
-				0E6B99E62B8B60C7006EB3F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +144,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0E6B99E42B8B60C7006EB3F8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0E6B99E52B8B60C7006EB3F8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0E6B99E92B8B60C8006EB3F8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +285,7 @@
 				INFOPLIST_FILE = "ios-gif-search/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,7 +312,7 @@
 				INFOPLIST_FILE = "ios-gif-search/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
