@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ApiType {
+enum APIType {
     case search
     case trending
 }

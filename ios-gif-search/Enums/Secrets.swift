@@ -15,7 +15,7 @@ enum Secrets {
         return dict
     }()
     
-    static let apiKey: String = {
+    static let APIKey: String = {
         guard let string = infoDictionary["API_KEY"] as? String else { fatalError("not exists in plist") }
         return string
     }()
