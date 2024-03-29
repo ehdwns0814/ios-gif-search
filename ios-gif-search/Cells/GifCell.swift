@@ -10,7 +10,6 @@ import UIKit
 class GifCell: UICollectionViewCell {
     
     static let identifier = "GifCell"
-    var gif: Gif?
     
     lazy var gifView: UIImageView = {
         let view = UIImageView()
@@ -19,15 +18,9 @@ class GifCell: UICollectionViewCell {
         return view
     }()
     
-//    override func layoutSubviews() {
-//        super.layoutSubviews()
-//        if gif != nil {
-//            let gifURL = gif!.getGifURL()
-//            gifView.image = UIImage.gif(url: gifURL)
-//            gifView.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
-//            addSubview(gifView)
-//        }
-//    }
+    func configure(_ image: UIImage) {
+        gifView.image  = image
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
