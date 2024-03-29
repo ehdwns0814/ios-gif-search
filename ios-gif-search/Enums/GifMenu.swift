@@ -7,7 +7,9 @@
 
 import Foundation
 
-enum APIType {
-    case search
-    case trending
+enum GifMenu: String {
+    case gif = "gifs"
+    case sticker = "stickers"
 }
+
+ 
