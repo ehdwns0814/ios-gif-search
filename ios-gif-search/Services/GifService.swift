@@ -23,7 +23,6 @@ final class GifService {
             completion(nil, Error.urlError)
             return
         }
-        print(requestURl)
         
         var request = URLRequest(url: requestURl)
         request.httpMethod = "GET"
@@ -56,19 +55,5 @@ final class GifService {
         components.queryItems = queryItems
         return components.url
     }
-    
-    func configure(gif: Gif, completion: @escaping (UIImage?) -> Void) {
-        guard let url = URL(string: gif.giftURL) else {
-            completion(nil)
-            return
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil, let image = UIImage(data: data) else {
-                completion(nil)
-                return
-            }
-            completion(image)
-        }.resume()
-    }
 }
+

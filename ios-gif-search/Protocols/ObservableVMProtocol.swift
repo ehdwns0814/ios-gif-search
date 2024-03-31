@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ObservableVMProtocol {
-    associatedtype T = Gif
+    associatedtype T
     
     func fetchData(searchType: GifMenu, searchMenu: GifType)
     

@@ -13,7 +13,7 @@ struct Gif: Decodable {
         case gifSources = "images"
     }
     
-    var giftURL: String {
+    var gifURL: String {
         return gifSources.original.url
     }
 }
