@@ -7,10 +7,10 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
     
     let homeView = HomeView()
-    var viewModel = SearchViewModel()
+    private var viewModel = SearchViewModel()
 
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -33,16 +33,17 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
      
         
-        setupData()
         setupViews()
         setupLayouts()
+        setupData()
+
     }
     
     func setupViews() {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-//        setupBinding()
+        setupBinding()
         
         homeView.searchBar.searchTextField.delegate = self
         homeView.searchBar.searchTextField.placeholder = "Search Gifs"
@@ -75,10 +76,12 @@ class SearchViewController: UIViewController {
         viewModel.fetchData(searchType: .gif, searchMenu: .trending)
     }
     
-    private func setupBinding(){
+    private func setupBinding() {
         viewModel.storage.bind { [weak self] _ in
             guard let self = self else { return }
-            self.collectionView.reloadData()
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
         
         //에러
@@ -89,7 +92,7 @@ class SearchViewController: UIViewController {
             if isSuccess {
                 print("DEBUG: success")
             } else {
-                print("DEBUG: \(self.viewModel.errorMessage)")
+                print("DEBUG: error")
             }
         }
     }
@@ -101,17 +104,14 @@ extension SearchViewController: UICollectionViewDelegate {
 
 extension SearchViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(viewModel.storage.value.count)
         return viewModel.storage.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GifCell.identifier, for: indexPath) as! GifCell
         
-        viewModel.network.configure(gif: viewModel.storage.value[indexPath.row]) { image in
-            guard let image = image else { return }
-            cell.configure(image)
-        }
+        cell.configure(with: viewModel.storage.value[indexPath.row].gifURL)
+
         return cell
     } 
 }
