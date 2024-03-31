@@ -9,6 +9,9 @@ import Foundation
 
 enum Error {
     case urlError
+    case serverResponseError
+    case UIImageError
+    case loadImageError
 }
 
 
