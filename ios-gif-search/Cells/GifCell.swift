@@ -7,23 +7,47 @@
 
 import UIKit
 
-class GifCell: UICollectionViewCell {
+final class GifCell: UICollectionViewCell {
     
     static let identifier = "GifCell"
     
-    lazy var gifView: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFit
-        view.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
-        return view
-    }()
+    private var imageView: UIImageView!
     
-    func configure(_ image: UIImage) {
-        gifView.image  = image
+    func configure(with imageURL: String) {
+        guard let url = URL(string: imageURL) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                    print(error?.localizedDescription)
+                    return
+                }
+                
+                guard let data = data, let image = UIImage(data: data) else {
+                    print(error?.localizedDescription)
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    UIImage.animatedGIF(with: url) { image in
+                        self.imageView.image = image
+                    }
+                }
+            }
+        }.resume()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        imageView = UIImageView(frame: self.bounds)
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        self.contentView.addSubview(imageView)
     }
     
     required init?(coder: NSCoder) {
