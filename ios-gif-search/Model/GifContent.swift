@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GifType: String {
+enum GifContent: String {
     case trending = "trending"
     case search = "search"
     case translate = "translate"

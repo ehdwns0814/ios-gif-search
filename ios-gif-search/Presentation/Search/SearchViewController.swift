@@ -83,8 +83,7 @@ final class SearchViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
-        
-        //에러
+    
         let message = "setupBinding - Binding error"
         viewModel.errorMessage = Observable(message)
         

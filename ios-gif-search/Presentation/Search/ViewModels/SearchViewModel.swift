@@ -7,11 +7,11 @@
 //
 import Foundation
 
-final class SearchViewModel: ObservableVMProtocol {
+final class SearchViewModel {
     typealias T = Gif
     let network = GifService()
     
-    func fetchData(searchType: GifMenu, searchMenu: GifType) {
+    func fetchData(searchType: GifType, searchMenu: GifContent) {
         network.fetchGifs(searchType: searchType.rawValue, searchMenu: searchMenu.rawValue, searchTerm: nil) { [weak self] response, error in
             guard let self = self, let gifs = response?.gifs else { return }
             storage.value = gifs

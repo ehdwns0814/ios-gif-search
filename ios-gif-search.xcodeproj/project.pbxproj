@@ -17,12 +17,12 @@
 		0E87016E2BB3689200ED00B0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87016D2BB3689200ED00B0 /* Error.swift */; };
 		0EA540652B9D4E20004C9E2C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA540642B9D4E20004C9E2C /* SearchViewModel.swift */; };
 		0EA540682B9DCBBC004C9E2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA540672B9DCBBC004C9E2C /* HomeView.swift */; };
-		0EC02F342BB6A2F60062F73F /* GifType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC02F332BB6A2F60062F73F /* GifType.swift */; };
+		0EC02F342BB6A2F60062F73F /* GifContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC02F332BB6A2F60062F73F /* GifContent.swift */; };
 		0EC600FC2BB9145000E85C34 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC600FB2BB9145000E85C34 /* UIImage.swift */; };
 		0EE21B4E2B98345C00CE55D0 /* GifService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE21B4D2B98345C00CE55D0 /* GifService.swift */; };
 		0EE4A1CA2B9ABD66002ED8BA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4A1C92B9ABD66002ED8BA /* TabBarViewController.swift */; };
 		0EE4A1CF2B9ABEF9002ED8BA /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4A1CE2B9ABEF9002ED8BA /* MyViewController.swift */; };
-		0EE4A1D32B9B101F002ED8BA /* GifMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4A1D22B9B101F002ED8BA /* GifMenu.swift */; };
+		0EE4A1D32B9B101F002ED8BA /* GifType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4A1D22B9B101F002ED8BA /* GifType.swift */; };
 		0EE929302B93125100AEE700 /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE9292F2B93125100AEE700 /* GifCell.swift */; };
 		0EED821D2B983A24009ABC18 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED821C2B983A24009ABC18 /* Gif.swift */; };
 		0EF00C2E2BB2F228005A6FB9 /* ObservableVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF00C2D2BB2F228005A6FB9 /* ObservableVMProtocol.swift */; };
@@ -42,12 +42,12 @@
 		0E87016D2BB3689200ED00B0 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		0EA540642B9D4E20004C9E2C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		0EA540672B9DCBBC004C9E2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0EC02F332BB6A2F60062F73F /* GifType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifType.swift; sourceTree = "<group>"; };
+		0EC02F332BB6A2F60062F73F /* GifContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifContent.swift; sourceTree = "<group>"; };
 		0EC600FB2BB9145000E85C34 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		0EE21B4D2B98345C00CE55D0 /* GifService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifService.swift; sourceTree = "<group>"; };
 		0EE4A1C92B9ABD66002ED8BA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		0EE4A1CE2B9ABEF9002ED8BA /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
-		0EE4A1D22B9B101F002ED8BA /* GifMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifMenu.swift; sourceTree = "<group>"; };
+		0EE4A1D22B9B101F002ED8BA /* GifType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifType.swift; sourceTree = "<group>"; };
 		0EE9292F2B93125100AEE700 /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 		0EED821C2B983A24009ABC18 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		0EF00C2D2BB2F228005A6FB9 /* ObservableVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableVMProtocol.swift; sourceTree = "<group>"; };
@@ -68,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				0E2B33E32BA2DFAD00D7A4C3 /* Secrets.xcconfig */,
-				0E87016C2BB3687D00ED00B0 /* Errors */,
 				0E6B99DD2B8B60C7006EB3F8 /* ios-gif-search */,
 				0E6B99DC2B8B60C7006EB3F8 /* Products */,
 			);
@@ -85,18 +84,14 @@
 		0E6B99DD2B8B60C7006EB3F8 /* ios-gif-search */ = {
 			isa = PBXGroup;
 			children = (
-				0EE4A1CD2B9ABDE1002ED8BA /* Search */,
-				0EE4A1CB2B9ABDD1002ED8BA /* Extension */,
-				0EE4A1D02B9ABF00002ED8BA /* Model */,
-				0EE4A1D12B9B0FFE002ED8BA /* Enums */,
-				0EA5405D2B9D4128004C9E2C /* Services */,
-				0EA540662B9DC8A6004C9E2C /* Cells */,
-				0EF00C2C2BB2F1F9005A6FB9 /* Protocols */,
-				0EE4A1CE2B9ABEF9002ED8BA /* MyViewController.swift */,
 				0E6B99DE2B8B60C7006EB3F8 /* AppDelegate.swift */,
 				0E6B99E02B8B60C7006EB3F8 /* SceneDelegate.swift */,
-				0EE4A1C92B9ABD66002ED8BA /* TabBarViewController.swift */,
-				0E2B33E62BA4478C00D7A4C3 /* Observable.swift */,
+				0EE4A1D02B9ABF00002ED8BA /* Model */,
+				0EE890682BB9A28E003B86A9 /* Services */,
+				0EE8906A2BB9A2DC003B86A9 /* Presentation */,
+				0EE4A1D12B9B0FFE002ED8BA /* Enums */,
+				0EE4A1CB2B9ABDD1002ED8BA /* Extension */,
+				0EA540662B9DC8A6004C9E2C /* Utility */,
 				0E6B99E72B8B60C8006EB3F8 /* Assets.xcassets */,
 				0E6B99E92B8B60C8006EB3F8 /* LaunchScreen.storyboard */,
 				0E6B99EC2B8B60C8006EB3F8 /* Info.plist */,
@@ -110,14 +105,6 @@
 				0E87016D2BB3689200ED00B0 /* Error.swift */,
 			);
 			path = Errors;
-			sourceTree = "<group>";
-		};
-		0EA5405D2B9D4128004C9E2C /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				0EE21B4D2B98345C00CE55D0 /* GifService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		0EA5405E2B9D417A004C9E2C /* ViewModels */ = {
@@ -136,12 +123,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0EA540662B9DC8A6004C9E2C /* Cells */ = {
+		0EA540662B9DC8A6004C9E2C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				0EE9292F2B93125100AEE700 /* GifCell.swift */,
+				0E2B33E62BA4478C00D7A4C3 /* Observable.swift */,
 			);
-			path = Cells;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		0EE4A1CB2B9ABDD1002ED8BA /* Extension */ = {
@@ -166,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				0EED821C2B983A24009ABC18 /* Gif.swift */,
+				0EE4A1D22B9B101F002ED8BA /* GifType.swift */,
+				0EC02F332BB6A2F60062F73F /* GifContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,10 +163,62 @@
 			isa = PBXGroup;
 			children = (
 				0E2B33E42BA3191E00D7A4C3 /* Secrets.swift */,
-				0EE4A1D22B9B101F002ED8BA /* GifMenu.swift */,
-				0EC02F332BB6A2F60062F73F /* GifType.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		0EE890682BB9A28E003B86A9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0EE21B4D2B98345C00CE55D0 /* GifService.swift */,
+				0E87016C2BB3687D00ED00B0 /* Errors */,
+			);
+			name = Services;
+			path = Model/Services;
+			sourceTree = "<group>";
+		};
+		0EE8906A2BB9A2DC003B86A9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0EF00C2C2BB2F1F9005A6FB9 /* Protocols */,
+				0EE8906B2BB9A303003B86A9 /* Common */,
+				0EE8906C2BB9A318003B86A9 /* Tap */,
+				0EE8906D2BB9A325003B86A9 /* My */,
+				0EE4A1CD2B9ABDE1002ED8BA /* Search */,
+				0EE8906E2BB9A3C0003B86A9 /* Detail */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0EE8906B2BB9A303003B86A9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0EE9292F2B93125100AEE700 /* GifCell.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0EE8906C2BB9A318003B86A9 /* Tap */ = {
+			isa = PBXGroup;
+			children = (
+				0EE4A1C92B9ABD66002ED8BA /* TabBarViewController.swift */,
+			);
+			path = Tap;
+			sourceTree = "<group>";
+		};
+		0EE8906D2BB9A325003B86A9 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				0EE4A1CE2B9ABEF9002ED8BA /* MyViewController.swift */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		0EE8906E2BB9A3C0003B86A9 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		0EF00C2C2BB2F1F9005A6FB9 /* Protocols */ = {
@@ -260,8 +301,8 @@
 			files = (
 				0E87016E2BB3689200ED00B0 /* Error.swift in Sources */,
 				0EE4A1CA2B9ABD66002ED8BA /* TabBarViewController.swift in Sources */,
-				0EC02F342BB6A2F60062F73F /* GifType.swift in Sources */,
-				0EE4A1D32B9B101F002ED8BA /* GifMenu.swift in Sources */,
+				0EC02F342BB6A2F60062F73F /* GifContent.swift in Sources */,
+				0EE4A1D32B9B101F002ED8BA /* GifType.swift in Sources */,
 				0E6B99E32B8B60C7006EB3F8 /* SearchViewController.swift in Sources */,
 				0EF00C2E2BB2F228005A6FB9 /* ObservableVMProtocol.swift in Sources */,
 				0EA540652B9D4E20004C9E2C /* SearchViewModel.swift in Sources */,
