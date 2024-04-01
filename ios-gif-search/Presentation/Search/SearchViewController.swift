@@ -77,7 +77,7 @@ final class SearchViewController: UIViewController {
     }
     
     private func setupBinding() {
-        viewModel.storage.bind { [weak self] _ in
+        viewModel.storage.subscribe { [weak self] _ in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -87,7 +87,7 @@ final class SearchViewController: UIViewController {
         let message = "setupBinding - Binding error"
         viewModel.errorMessage = Observable(message)
         
-        viewModel.error.bind { isSuccess in
+        viewModel.error.subscribe { isSuccess in
             if isSuccess {
                 print("DEBUG: success")
             } else {
