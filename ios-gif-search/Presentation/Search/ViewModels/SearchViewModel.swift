@@ -9,24 +9,36 @@ import Foundation
 
 final class SearchViewModel {
     typealias T = Gif
-    let network = GifService()
     
-    func fetchData(searchType: GifType, searchMenu: GifContent) {
-        network.fetchGifs(searchType: searchType.rawValue, searchMenu: searchMenu.rawValue, searchTerm: nil) { [weak self] response, error in
-            guard let self = self, let gifs = response?.gifs else { return }
-            storage.value = gifs
+    private let giphyOperation: GiphyOperation
+    var gifUrlStorage: Observable<[T]> = Observable([])
+    private let network = GiphyService(apiProvider: ProviderImplementation())
+    
+    init(giphyOperation: GiphyOperation) {
+        self.giphyOperation = giphyOperation
+    }
+    
+    func fetchSearchedGif(query: String) {
+        network.searchGif(type: .gif, query: query, offset: 0) { [weak self] result in
+            switch result {
+            case .success(let gifBundle):
+                self?.gifUrlStorage.value = gifBundle.gifs
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
-    func setError(_ message: String) {   
-        
+    func fetchTrendingGif() {
+        network.fetchTrendingGif(type: .gif, offset: 0) { [weak self] result in
+            switch result {
+            case .success(let gifBundle):
+                self?.gifUrlStorage.value = gifBundle.gifs
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
-    
-    var storage: Observable<[T]> = Observable([])
-    
-    var errorMessage: Observable<String?> = Observable(nil)
-    
-    var error: Observable<Bool> = Observable(false)
 }
 
 

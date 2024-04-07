@@ -11,5 +11,3 @@ enum GifType: String {
     case gif = "gifs"
     case sticker = "stickers"
 }
-
- 
