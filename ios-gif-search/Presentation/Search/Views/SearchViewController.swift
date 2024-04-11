@@ -60,7 +60,7 @@ final class SearchViewController: UIViewController {
             homeView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             homeView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             homeView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            homeView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2),
+            homeView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15),
             
             collectionView.topAnchor.constraint(equalTo: homeView.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
