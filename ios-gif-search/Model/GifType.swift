@@ -7,9 +7,7 @@
 
 import Foundation
 
-enum GifMenu: String {
-    case gif = "gifs"
-    case sticker = "stickers"
+enum GifType: String {
+    case gif
+    case sticker
 }
-
- 

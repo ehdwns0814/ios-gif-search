@@ -10,7 +10,7 @@ import UIKit
 final class SearchViewController: UIViewController {
     
     let homeView = HomeView()
-    private var viewModel = SearchViewModel()
+    private var viewModel = SearchViewModel(giphyOperation: GiphyService(apiProvider: ProviderImplementation()))
 
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -31,12 +31,10 @@ final class SearchViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         
         setupViews()
         setupLayouts()
         setupData()
-
     }
     
     func setupViews() {
@@ -73,26 +71,14 @@ final class SearchViewController: UIViewController {
     
     // MARK: - Helpers
     private func setupData() {
-        viewModel.fetchData(searchType: .gif, searchMenu: .trending)
+        viewModel.fetchTrendingGif()
     }
     
     private func setupBinding() {
-        viewModel.storage.bind { [weak self] _ in
+        viewModel.gifUrlStorage.subscribe { [weak self] _ in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
-            }
-        }
-        
-        //에러
-        let message = "setupBinding - Binding error"
-        viewModel.errorMessage = Observable(message)
-        
-        viewModel.error.bind { isSuccess in
-            if isSuccess {
-                print("DEBUG: success")
-            } else {
-                print("DEBUG: error")
             }
         }
     }
@@ -104,13 +90,16 @@ extension SearchViewController: UICollectionViewDelegate {
 
 extension SearchViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.storage.value.count
+        guard let urlCount = viewModel.gifUrlStorage.value?.count else { return 0 }
+        return urlCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GifCell.identifier, for: indexPath) as! GifCell
         
-        cell.configure(with: viewModel.storage.value[indexPath.row].gifURL)
+        guard let urls = viewModel.gifUrlStorage.value else { return cell }
+        
+        cell.configure(with: urls[indexPath.row].mediaResource.imageURL)
 
         return cell
     } 
@@ -120,7 +109,8 @@ extension SearchViewController: UISearchTextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if textField.text != nil {
-            
+            guard let searchedText = textField.text else { return false }
+            viewModel.fetchSearchedGif(query: searchedText)
         }
         return true
     }
