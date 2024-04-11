@@ -8,6 +8,6 @@
 import Foundation
 
 enum GifType: String {
-    case gif = "gifs"
-    case sticker = "stickers"
+    case gif
+    case sticker
 }
