@@ -11,14 +11,15 @@ extension GifTrendingResponse {
     func toTrendingGifBunddle() -> GifBundle {
         let offset = pagination.offset
         let target = min(pagination.totalCount, 4999)
-        return GifBundle(gifs: gifs.compactMap{ $0.toTrendingGif() }
-        )
+        return GifBundle(gifs: gifs.compactMap{ $0.toTrendingGif() })
     }
 }
 
 extension TrendingGifResponse {
     func toTrendingGif() -> Gif? {
-        guard let type = GifType(rawValue: self.type) else { return nil }
+        guard let type = GifType(rawValue: self.type) else {
+            return nil
+        }
         
         return Gif(
             type: type,
@@ -35,7 +36,8 @@ extension TrendingUserResponse {
         return User(
             name: username,
             profileURL: profileURL,
-            displayName: displayName)
+            displayName: displayName
+        )
     }
 }
 

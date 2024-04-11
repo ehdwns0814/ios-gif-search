@@ -19,7 +19,7 @@ final class SearchViewModel {
     }
     
     func fetchSearchedGif(query: String) {
-        network.searchGif(type: .gif, query: query, offset: 0) { [weak self] result in
+        network.searchGif(type: .gif, query: query, offset: 0) { [weak self] result in 
             switch result {
             case .success(let gifBundle):
                 self?.gifUrlStorage.value = gifBundle.gifs

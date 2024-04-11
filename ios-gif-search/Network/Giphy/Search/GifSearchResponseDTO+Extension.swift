@@ -12,8 +12,7 @@ extension GifSearchResponse {
         let offset = pagination.offset
         let target = min(pagination.totalCount, 4999)
         let isNextPage = offset < target
-        return GifBundle(gifs: gifs.compactMap{ $0.toSearchedGif() }
-        )
+        return GifBundle(gifs: gifs.compactMap{ $0.toSearchedGif() })
     }
 }
 
