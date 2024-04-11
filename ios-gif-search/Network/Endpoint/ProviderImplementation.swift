@@ -16,7 +16,7 @@ final class ProviderImplementation: APIProvider {
         
         session.dataTask(with: urlRequest) { data, response, error in
             if error != nil {
-                completion(.failure(.severError))
+                completion(.failure(.serverError))
                 return
             }
             

@@ -8,7 +8,7 @@
 import Foundation
 
 extension GifSearchResponse {
-    func fetchGifBunddle() -> GifBundle {
+    func toGifBunddle() -> GifBundle {
         let offset = pagination.offset
         let target = min(pagination.totalCount, 4999)
         let isNextPage = offset < target
@@ -25,7 +25,8 @@ extension SearchedGifResponse {
             identifier: identifier,
             user: user?.toSearchedUser(),
             mediaResource: images.toMediaResource(),
-            title: title)
+            title: title
+        )
     }
 }
 
@@ -34,7 +35,8 @@ extension UserResponse {
         return User(
             name: username,
             profileURL: profileURL,
-            displayName: displayName)
+            displayName: displayName
+        )
     }
 }
 

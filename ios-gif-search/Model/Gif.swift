@@ -14,7 +14,6 @@ struct Gif {
     let title: String
 }
 
-
 struct GifBundle {
     var gifs: [Gif]
 }

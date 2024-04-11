@@ -25,7 +25,8 @@ extension TrendingGifResponse {
             identifier: identifier,
             user: user?.toTrendingUser(),
             mediaResource: images.toMediaResource(),
-            title: title)
+            title: title
+        )
     }
 }
 
@@ -43,4 +44,3 @@ extension TrendingImageResponse {
         return MediaResource(imageURL: fixedWidth.url)
     }
 }
-

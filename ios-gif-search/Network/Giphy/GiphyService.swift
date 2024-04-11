@@ -17,7 +17,7 @@ final class GiphyService: GiphyOperation {
     func searchGif(type: GifType, query: String, offset: Int, completion: @escaping ((Result<GifBundle, NetworkError>) -> Void)) {
         let request = GifSearchRequest(type: type, query: query, offset: offset)
         apiProvider.request(request) { result in
-            let response = result.map { $0.fetchGifBunddle() }
+            let response = result.map { $0.toGifBunddle() }
             completion(response)
         }
     }
