@@ -34,9 +34,7 @@ final class GifCell: UICollectionViewCell {
                 }
                 
                 DispatchQueue.main.async {
-                    UIImage.animatedGIF(with: url) { image in
-                        self.imageView.image = image
-                    }
+                    self.imageView.setImageUrl(url.absoluteString)
                 }
             }
         }.resume()
