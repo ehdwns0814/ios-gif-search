@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E180BFD2BCA57EC00658CA3 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E180BFC2BCA57EC00658CA3 /* UIImageView + Extension.swift */; };
 		0E2B33E52BA3191E00D7A4C3 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B33E42BA3191E00D7A4C3 /* Secrets.swift */; };
 		0E2B33E72BA4479100D7A4C3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2B33E62BA4478C00D7A4C3 /* Observable.swift */; };
+		0E3B00CC2BC8FE37006BD3F0 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B00CB2BC8FE37006BD3F0 /* ImageCacheManager.swift */; };
 		0E6B99DF2B8B60C7006EB3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B99DE2B8B60C7006EB3F8 /* AppDelegate.swift */; };
 		0E6B99E12B8B60C7006EB3F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B99E02B8B60C7006EB3F8 /* SceneDelegate.swift */; };
 		0E6B99E32B8B60C7006EB3F8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6B99E22B8B60C7006EB3F8 /* SearchViewController.swift */; };
@@ -41,9 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E180BFC2BCA57EC00658CA3 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		0E2B33E32BA2DFAD00D7A4C3 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		0E2B33E42BA3191E00D7A4C3 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		0E2B33E62BA4478C00D7A4C3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		0E3B00CB2BC8FE37006BD3F0 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		0E6B99DB2B8B60C7006EB3F8 /* ios-gif-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-gif-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6B99DE2B8B60C7006EB3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E6B99E02B8B60C7006EB3F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3B00CA2BC802AB006BD3F0 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		0E6B99D22B8B60C7006EB3F8 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +124,7 @@
 				0EE4A1D02B9ABF00002ED8BA /* Model */,
 				0EE8906F2BBA7CF6003B86A9 /* Network */,
 				0EE8906A2BB9A2DC003B86A9 /* Presentation */,
+				0E3B00CA2BC802AB006BD3F0 /* DataBase */,
 				0EE4A1D12B9B0FFE002ED8BA /* Enums */,
 				0EE4A1CB2B9ABDD1002ED8BA /* Extension */,
 				0EA540662B9DC8A6004C9E2C /* Utility */,
@@ -177,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				0E2B33E62BA4478C00D7A4C3 /* Observable.swift */,
+				0E3B00CB2BC8FE37006BD3F0 /* ImageCacheManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -193,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC600FB2BB9145000E85C34 /* UIImage+Extension.swift */,
+				0E180BFC2BCA57EC00658CA3 /* UIImageView + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -238,7 +252,6 @@
 		0EE8906A2BB9A2DC003B86A9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0EF00C2C2BB2F1F9005A6FB9 /* Protocols */,
 				0EE8906B2BB9A303003B86A9 /* Common */,
 				0EE8906C2BB9A318003B86A9 /* Tap */,
 				0EE8906D2BB9A325003B86A9 /* My */,
@@ -287,13 +300,6 @@
 				0E839C3A2BBA961600575C33 /* Giphy */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		0EF00C2C2BB2F1F9005A6FB9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +388,7 @@
 				0E839C4B2BBD474500575C33 /* GiphyAPIRequest.swift in Sources */,
 				0EE4A1CF2B9ABEF9002ED8BA /* MyViewController.swift in Sources */,
 				0E6B99DF2B8B60C7006EB3F8 /* AppDelegate.swift in Sources */,
+				0E3B00CC2BC8FE37006BD3F0 /* ImageCacheManager.swift in Sources */,
 				0E6B99E12B8B60C7006EB3F8 /* SceneDelegate.swift in Sources */,
 				0E839C492BBCBF8900575C33 /* ProviderImplementation.swift in Sources */,
 				0E839C572BBE572600575C33 /* GifTrendingRequest.swift in Sources */,
@@ -389,6 +396,7 @@
 				0E839C532BBE41E400575C33 /* MediaResource.swift in Sources */,
 				0E2B33E72BA4479100D7A4C3 /* Observable.swift in Sources */,
 				0EED821D2B983A24009ABC18 /* Gif.swift in Sources */,
+				0E180BFD2BCA57EC00658CA3 /* UIImageView + Extension.swift in Sources */,
 				0EC600FC2BB9145000E85C34 /* UIImage+Extension.swift in Sources */,
 				0E839C512BBE3A5A00575C33 /* User.swift in Sources */,
 				0E2B33E52BA3191E00D7A4C3 /* Secrets.swift in Sources */,

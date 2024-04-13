@@ -14,5 +14,4 @@ enum NetworkError: Error {
     case invalidStatus
     case invalidData
     case decodingError
-    
 }

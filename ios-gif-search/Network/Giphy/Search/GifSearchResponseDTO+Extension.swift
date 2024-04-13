@@ -18,7 +18,9 @@ extension GifSearchResponse {
 
 extension SearchedGifResponse {
     func toSearchedGif() -> Gif? {
-        guard let type = GifType(rawValue: self.type) else { return nil }
+        guard let type = GifType(rawValue: self.type) else {
+            return nil
+        }
         return Gif(
             type: type,
             identifier: identifier,
@@ -44,4 +46,3 @@ extension ImageResponse {
         return MediaResource(imageURL: fixedWidth.url)
     }
 }
-
